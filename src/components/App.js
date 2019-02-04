@@ -6,7 +6,6 @@ import '../quiz.css';
 
 class App extends React.Component {
   state = {
-    answered: 0,
     correct: []
   }
 
@@ -29,7 +28,6 @@ class App extends React.Component {
         key={item.word} 
         question={item} 
         index={index}
-        updateAnswered={this.updateAnswered} 
         updateCorrect={this.updateCorrect}
       />
     })
@@ -42,7 +40,7 @@ class App extends React.Component {
   }
   
   percentAnswered() {
-    return `${(this.state.answered / data.length) * 100}%`;
+    return `${(this.state.correct.length / data.length) * 100}%`;
   }
 
   render(){

@@ -8,10 +8,7 @@ class Question extends React.Component {
   }
 
   handleChange = (event) => {
-    const {question, updateAnswered, updateCorrect, index} = this.props;
-    if(this.state.checked === null) {
-      updateAnswered(1)
-    }
+    const {question, updateCorrect, index} = this.props;
   
     if(question.correctChoiceIndex == event.target.dataset.index){
       updateCorrect(index, 1)
