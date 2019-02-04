@@ -1,0 +1,35 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+}
+.d-block {
+  display: block;
+}
+.progress-bar-outer {
+  height: 30px;
+  max-width: 500px;
+  margin: 0.5rem 0;
+  border: 1px solid #666;
+  background-color: #aaa;
+  border-radius: 10px;
+  overflow:hidden;
+}
+.progress-bar-inner {
+  width: 2%;
+  height: 30px;
+  background-color: green;
+}
+.quiz-info {
+  margin-bottom: 1rem;
+}
