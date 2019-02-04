@@ -50,7 +50,12 @@ class App extends React.Component {
         </div>
       </div>
       <div className="card-col">
-        {this.renderQuestions()}
+        <form>
+          {this.renderQuestions()}
+          <div className="button-wrapper"> 
+            <input type="submit" value="SUBMIT" />
+          </div>
+        </form>
       </div>
       <div className="desktop-info">
         <div className="quiz-info">

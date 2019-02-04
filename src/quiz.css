@@ -38,7 +38,7 @@ body {
 .card {
   background: #fff;
   border-radius: 2px;
-  margin: 0 15px 15px 0;
+  margin-bottom: 15px;
   position: relative;
   box-shadow: -3px -3px 5px rgba(0,0,0,0.19), 3px 3px 5px rgba(0,0,0,.19);
   padding: 20px;
@@ -52,6 +52,15 @@ body {
 input[type="radio"] {
   float: left;
 }
+
+input[type="submit"] {
+  padding: 5px 15px;
+  background: #1218D4;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
 
 .label-text {
   float: left;
@@ -69,12 +78,15 @@ input[type="radio"] {
 }
 
 .desktop-info .quiz-info {
-  padding: 0 20px 20px 20px;
+  padding: 0 20px 20px 35px;
 }
 
 .question {
   font-size: 18px;
   margin-bottom: 15px;
+}
+.button-wrapper {
+  text-align: right;
 }
 
 
@@ -88,14 +100,11 @@ input[type="radio"] {
   .desktop-info {
     display: none;
   }
-  .card {
-    margin-right: 0;
-  }
   .title {
     font-size: 20px;
   }
   .label-text {
     width: 90%;
   }
-  
+ 
 }
