@@ -9,13 +9,6 @@ class App extends React.Component {
     correct: []
   }
 
-  updateAnswered = (answered) => {
-    let currentAnswered = this.state.answered;
-    this.setState({
-      answered: currentAnswered += answered,
-    })
-    
-  }
   updateCorrect = (index, value) => {
     let currentCorrect = this.state.correct;
     const newCorrect = currentCorrect[index] = value
