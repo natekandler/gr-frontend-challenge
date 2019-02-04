@@ -37,17 +37,25 @@ class App extends React.Component {
     return `${(value)}%`;
   }
 
-  render(){
+  renderInfo() {
     return (
-    <div className='container'>
-      <h1 className="title">Abstruse Verbiage</h1>
-      <div className='quiz-info mobile-info'>
+      <div>
         Your score: {this.generateScore()}
         <hr/ >
         Your Progress:
         <div className='progress-bar-outer'>
           <div className='progress-bar-inner' id='quizProgressBar' style={{'width': this.percentAnswered()}}></div>
         </div>
+     </div>
+    )
+  }
+
+  render(){
+    return (
+    <div className='container'>
+      <h1 className="title">Abstruse Verbiage</h1>
+      <div className='quiz-info mobile-info'>
+        {this.renderInfo()}
       </div>
       <div className="card-col">
         <form>
@@ -59,14 +67,8 @@ class App extends React.Component {
       </div>
       <div className="desktop-info">
         <div className="quiz-info">
-        Your score: {this.generateScore()}
-          <hr/ >
-          Your Progress:
-          <div className='progress-bar-outer'>
-            <div className='progress-bar-inner' id='quizProgressBar' style={{'width': this.percentAnswered()}}></div>
-          </div>
+          {this.renderInfo()}
         </div>
-
       </div>
       
     </div>
