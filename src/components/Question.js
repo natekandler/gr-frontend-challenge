@@ -28,7 +28,7 @@ class Question extends React.Component {
         <div key={answer}>
           <label className="d-block">
             <input type="radio" data-index={index} checked={answer === this.state.checked} value={answer} onChange={this.handleChange}/>
-            {answer}
+            <div className="label-text">{answer}</div>
         </label>
       </div>
       )
@@ -38,7 +38,7 @@ class Question extends React.Component {
   render () {
     return (
       <div className="card"> 
-        <div className="question">Choose the correct meaning of {this.props.question.word}</div>
+        <div className="question">Choose the correct meaning of {this.props.question.word}:</div>
         {this.generateAnswers()}
       </div>
     )

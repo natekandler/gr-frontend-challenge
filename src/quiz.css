@@ -42,10 +42,21 @@ body {
   position: relative;
   box-shadow: -3px -3px 5px rgba(0,0,0,0.19), 3px 3px 5px rgba(0,0,0,.19);
   padding: 20px;
+  overflow: auto;
 }
 .card-col {
   width: 70%;
   float: left;
+}
+
+input[type="radio"] {
+  float: left;
+}
+
+.label-text {
+  float: left;
+  width: 95%;
+  margin-left: 5px;
 }
 
 .desktop-info {
@@ -74,10 +85,17 @@ body {
   .mobile-info {
     display: block;
   }
+  .desktop-info {
+    display: none;
+  }
   .card {
     margin-right: 0;
   }
   .title {
     font-size: 20px;
   }
+  .label-text {
+    width: 90%;
+  }
+  
 }
