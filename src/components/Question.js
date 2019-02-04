@@ -37,8 +37,8 @@ class Question extends React.Component {
 
   render () {
     return (
-      <div>
-        <div>Choose the correct meaning of {this.props.question.word}</div>
+      <div className="card"> 
+        <div className="question">Choose the correct meaning of {this.props.question.word}</div>
         {this.generateAnswers()}
       </div>
     )

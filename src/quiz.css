@@ -2,6 +2,8 @@ html {
   box-sizing: border-box;
   font-family: sans-serif;
   line-height: 1.15;
+  background-color: #f6f6f6;
+  padding: 20px;
 }
 
 body {
@@ -11,7 +13,6 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
 }
 .d-block {
   display: block;
@@ -32,4 +33,51 @@ body {
 }
 .quiz-info {
   margin-bottom: 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  margin: 0 15px 15px 0;
+  position: relative;
+  box-shadow: 0 0px 5px rgba(0,0,0,0.19), 0 3px 5px rgba(0,0,0,.19);
+  padding: 20px;
+}
+.card-col {
+  width: 70%;
+  float: left;
+}
+
+.desktop-info {
+  width: 30%;
+  float: left;
+}
+.mobile-info{
+  display: none;
+  margin-bottom: 30px;
+}
+
+.desktop-info .quiz-info {
+  padding: 0 20px 20px 20px;
+}
+
+.question {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .card-col {
+    width: 100%;
+  }
+  .mobile-info {
+    display: block;
+  }
+  .card {
+    margin-right: 0;
+  }
+  .title {
+    font-size: 20px;
+  }
 }

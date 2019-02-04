@@ -33,14 +33,15 @@ class App extends React.Component {
   }
   
   percentAnswered() {
-    return `${(this.state.correct.length / data.length) * 100}%`;
+    const value = this.state.correct.length / data.length * 100 || 2
+    return `${(value)}%`;
   }
 
   render(){
     return (
     <div className='container'>
-      <h1>Abstruse Verbiage</h1>
-      <div className='quiz-info'>
+      <h1 className="title">Abstruse Verbiage</h1>
+      <div className='quiz-info mobile-info'>
         Your score: {this.generateScore()}
         <hr/ >
         Your Progress:
@@ -48,7 +49,21 @@ class App extends React.Component {
           <div className='progress-bar-inner' id='quizProgressBar' style={{'width': this.percentAnswered()}}></div>
         </div>
       </div>
-      {this.renderQuestions()}
+      <div className="card-col">
+        {this.renderQuestions()}
+      </div>
+      <div className="desktop-info">
+        <div className="quiz-info">
+        Your score: {this.generateScore()}
+          <hr/ >
+          Your Progress:
+          <div className='progress-bar-outer'>
+            <div className='progress-bar-inner' id='quizProgressBar' style={{'width': this.percentAnswered()}}></div>
+          </div>
+        </div>
+
+      </div>
+      
     </div>
     )
   }
