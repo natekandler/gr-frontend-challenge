@@ -9,11 +9,12 @@ class Question extends React.Component {
 
   handleChange = (event) => {
     const {question, updateCorrect, index} = this.props;
+    const intIndex = parseInt(index);
   
-    if(question.correctChoiceIndex == event.target.dataset.index){
-      updateCorrect(index, 1)
+    if(question.correctChoiceIndex === parseInt(event.target.dataset.index)){
+      updateCorrect(intIndex, 1)
     } else  {
-      updateCorrect(index, 0)
+      updateCorrect(intIndex, 0)
     }
 
     const correct = 

@@ -10,9 +10,9 @@ class App extends React.Component {
   }
 
   updateCorrect = (index, value) => {
-    let currentCorrect = this.state.correct;
-    const newCorrect = currentCorrect[index] = value
-    this.setState({currentCorrect: newCorrect})
+    let newCorrect  = [...this.state.correct];
+    newCorrect[index] = value
+    this.setState({correct: newCorrect})
   }
 
   renderQuestions() {
