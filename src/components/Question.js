@@ -25,7 +25,7 @@ class Question extends React.Component {
   generateAnswers(){
     return this.props.question.choices.map((answer, index) => {
       return (
-        <div key={answer}>
+        <div>
           <label className="d-block">
             <input type="radio" data-index={index} checked={answer === this.state.checked} value={answer} onChange={this.handleChange}/>
             <div className="label-text">{answer}</div>
@@ -39,8 +39,8 @@ class Question extends React.Component {
     return (
       <div className="card"> 
         <div className="question">Choose the correct meaning of {this.props.question.word}:</div>
-        {this.generateAnswers()}
       </div>
+      {this.generateAnswers()}
     )
   }
 

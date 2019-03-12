@@ -27,20 +27,20 @@ class App extends React.Component {
   }
 
   generateScore() {
-    return this.state.correct.reduce((sum, item) => {
+    this.state.correct.reduce((sum, item) => {
       return sum += item
     },0)
   }
   
   percentAnswered() {
-    const value = this.state.correct.length / data.length * 100 || 2
+    const value = this.state.answered.length / data.length * 100 || 2
     return `${(value)}%`;
   }
 
   renderInfo() {
     return (
       <div>
-        Your score: {this.generateScore()}
+        Your score: {this.generatescore()}
         <hr/ >
         Your Progress:
         <div className='progress-bar-outer'>
